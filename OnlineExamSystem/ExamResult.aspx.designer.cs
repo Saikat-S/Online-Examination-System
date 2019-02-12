@@ -67,13 +67,13 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.Button profileB;
         
         /// <summary>
-        /// coursesB control.
+        /// LeaderboardB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button coursesB;
+        protected global::System.Web.UI.WebControls.Button LeaderboardB;
         
         /// <summary>
         /// logoutB control.
@@ -85,13 +85,13 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.Button logoutB;
         
         /// <summary>
-        /// Panel1 control.
+        /// Panel4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Panel Panel4;
         
         /// <summary>
         /// Label4 control.
@@ -130,6 +130,15 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
+        /// Panel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel3;
+        
+        /// <summary>
         /// no1 control.
         /// </summary>
         /// <remarks>
@@ -146,6 +155,15 @@ namespace OnlineExamSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label qs1;
+        
+        /// <summary>
+        /// tag1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tag1;
         
         /// <summary>
         /// l1 control.
@@ -184,6 +202,15 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.Label qs2;
         
         /// <summary>
+        /// tag2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tag2;
+        
+        /// <summary>
         /// l2 control.
         /// </summary>
         /// <remarks>
@@ -218,6 +245,15 @@ namespace OnlineExamSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label qs3;
+        
+        /// <summary>
+        /// tag3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tag3;
         
         /// <summary>
         /// l3 control.
@@ -256,6 +292,15 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.Label qs4;
         
         /// <summary>
+        /// tag4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tag4;
+        
+        /// <summary>
         /// l4 control.
         /// </summary>
         /// <remarks>
@@ -290,6 +335,15 @@ namespace OnlineExamSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label qs5;
+        
+        /// <summary>
+        /// tag5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tag5;
         
         /// <summary>
         /// l5 control.

@@ -67,13 +67,13 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.Button profileB;
         
         /// <summary>
-        /// coursesB control.
+        /// LeaderboardB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button coursesB;
+        protected global::System.Web.UI.WebControls.Button LeaderboardB;
         
         /// <summary>
         /// logoutB control.

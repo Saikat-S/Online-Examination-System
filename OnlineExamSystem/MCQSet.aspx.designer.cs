@@ -184,6 +184,15 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.TextBox Op2TBox;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// selectCourseL control.
         /// </summary>
         /// <remarks>
@@ -211,22 +220,13 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.TextBox Op3TBox;
         
         /// <summary>
-        /// qsNoL control.
+        /// qsTagTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label qsNoL;
-        
-        /// <summary>
-        /// qsNoTBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox qsNoTBox;
+        protected global::System.Web.UI.WebControls.TextBox qsTagTB;
         
         /// <summary>
         /// SelectCourseDropDownList control.
@@ -254,6 +254,42 @@ namespace OnlineExamSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Op4TBox;
+        
+        /// <summary>
+        /// qsNoL0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label qsNoL0;
+        
+        /// <summary>
+        /// timeTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox timeTB;
+        
+        /// <summary>
+        /// qsNoL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label qsNoL;
+        
+        /// <summary>
+        /// qsNoTBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox qsNoTBox;
         
         /// <summary>
         /// clearB control.

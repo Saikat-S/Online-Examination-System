@@ -103,13 +103,31 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.Label QL;
         
         /// <summary>
-        /// QTBox control.
+        /// QATBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox QTBox;
+        protected global::System.Web.UI.WebControls.TextBox QATBox;
+        
+        /// <summary>
+        /// QL2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label QL2;
+        
+        /// <summary>
+        /// QL0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label QL0;
         
         /// <summary>
         /// selectSemesterDropDownList control.
@@ -121,6 +139,24 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.DropDownList selectSemesterDropDownList;
         
         /// <summary>
+        /// QL3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label QL3;
+        
+        /// <summary>
+        /// markATB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox markATB;
+        
+        /// <summary>
         /// selectB control.
         /// </summary>
         /// <remarks>
@@ -130,6 +166,42 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.Button selectB;
         
         /// <summary>
+        /// QL1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label QL1;
+        
+        /// <summary>
+        /// QBTBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox QBTBox;
+        
+        /// <summary>
+        /// timeTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox timeTB;
+        
+        /// <summary>
+        /// qsNoTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox qsNoTB;
+        
+        /// <summary>
         /// selectCourseL control.
         /// </summary>
         /// <remarks>
@@ -137,6 +209,24 @@ namespace OnlineExamSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label selectCourseL;
+        
+        /// <summary>
+        /// QL4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label QL4;
+        
+        /// <summary>
+        /// markBTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox markBTB;
         
         /// <summary>
         /// SelectCourseDropDownList control.

@@ -16,7 +16,7 @@ namespace OnlineExamSystem
 
         protected void homeB_Click(object sender, EventArgs e)
         {
-            //Server.Transfer("Dashboard.aspx", true);
+
         }
 
         protected void profileB_Click(object sender, EventArgs e)
@@ -24,14 +24,9 @@ namespace OnlineExamSystem
             Server.Transfer("UserProfile.aspx", true);
         }
 
-        protected void coursesB_Click(object sender, EventArgs e)
+        protected void LeaderboardB_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void sCourseB_Click(object sender, EventArgs e)
-        {
-
+            Server.Transfer("Leaderboard.aspx", true);
         }
 
         protected void sExamB_Click(object sender, EventArgs e)

@@ -21,27 +21,27 @@ namespace OnlineExamSystem
 
         protected void profileB_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("AdminQueue.aspx", true);
         }
 
         protected void LeaderboardB_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void sCourseB_Click(object sender, EventArgs e)
-        {
-
+           Server.Transfer("AdminLeaderboard.aspx", true);
         }
 
         protected void sExamB_Click(object sender, EventArgs e)
         {
             Server.Transfer("SetExam.aspx", true);
         }
-
+        protected void eExamB_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("EditExam.aspx", true);
+        }
         protected void logoutB_Click(object sender, EventArgs e)
         {
             Server.Transfer("LoginPage.aspx", true);
         }
+
+       
     }
 }

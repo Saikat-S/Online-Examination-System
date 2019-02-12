@@ -66,6 +66,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminLeaderboard.aspx" />
+    <Content Include="AdminQueue.aspx" />
+    <Content Include="AdminCourseQueue.aspx" />
+    <Content Include="EditExam.aspx" />
+    <Content Include="EditMCQ.aspx" />
+    <Content Include="EditTheory.aspx" />
+    <Content Include="Leaderboard.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -82,6 +89,7 @@
     <Content Include="MCQExam.aspx" />
     <Content Include="MCQSet.aspx" />
     <Content Include="SetExam.aspx" />
+    <Content Include="ShowAns.aspx" />
     <Content Include="SignUpPage.aspx" />
     <Content Include="StartExam.aspx" />
     <Content Include="TheoryExam.aspx" />
@@ -90,12 +98,33 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminLeaderboard.aspx.cs">
+      <DependentUpon>AdminLeaderboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLeaderboard.aspx.designer.cs">
+      <DependentUpon>AdminLeaderboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminQueue.aspx.cs">
+      <DependentUpon>AdminQueue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminQueue.aspx.designer.cs">
+      <DependentUpon>AdminQueue.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel.aspx.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPanel.aspx.designer.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCourseQueue.aspx.cs">
+      <DependentUpon>AdminCourseQueue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCourseQueue.aspx.designer.cs">
+      <DependentUpon>AdminCourseQueue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -104,12 +133,40 @@
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditExam.aspx.cs">
+      <DependentUpon>EditExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditExam.aspx.designer.cs">
+      <DependentUpon>EditExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditMCQ.aspx.cs">
+      <DependentUpon>EditMCQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditMCQ.aspx.designer.cs">
+      <DependentUpon>EditMCQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTheory.aspx.cs">
+      <DependentUpon>EditTheory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditTheory.aspx.designer.cs">
+      <DependentUpon>EditTheory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ExamResult.aspx.cs">
       <DependentUpon>ExamResult.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ExamResult.aspx.designer.cs">
       <DependentUpon>ExamResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Leaderboard.aspx.cs">
+      <DependentUpon>Leaderboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Leaderboard.aspx.designer.cs">
+      <DependentUpon>Leaderboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
@@ -139,6 +196,13 @@
     </Compile>
     <Compile Include="SetExam.aspx.designer.cs">
       <DependentUpon>SetExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAns.aspx.cs">
+      <DependentUpon>ShowAns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowAns.aspx.designer.cs">
+      <DependentUpon>ShowAns.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignUpPage.aspx.cs">
       <DependentUpon>SignUpPage.aspx</DependentUpon>
@@ -175,6 +239,9 @@
     <Compile Include="UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

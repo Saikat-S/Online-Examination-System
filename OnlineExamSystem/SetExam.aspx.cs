@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+using System.Web.Configuration;
 
 namespace OnlineExamSystem
 {
@@ -23,21 +26,23 @@ namespace OnlineExamSystem
         }
         protected void LeaderboardB_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("AdminLeaderboard.aspx", true);
         }
         protected void theoryB_Click(object sender, EventArgs e)
         {
+            //Session["_qsN"] = 1;
             Server.Transfer("TheorySet.aspx", true);
         }
 
         protected void mcqB_Click(object sender, EventArgs e)
         {
+            //Session["_qsN"] = 1;
             Server.Transfer("MCQSet.aspx", true);
         }
 
         protected void logoutB_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("LoginPage.aspx", true);
         }
     }
 }
