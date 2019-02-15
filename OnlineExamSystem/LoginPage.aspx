@@ -17,7 +17,7 @@
             height: 23px;
         }
         .auto-style11 {
-            height: 129px;
+            height: 100px;
         }
         .auto-style9 {
             height: 50px;

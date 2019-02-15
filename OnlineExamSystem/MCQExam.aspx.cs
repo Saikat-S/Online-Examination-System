@@ -205,6 +205,20 @@ namespace OnlineExamSystem
 
             Session["_tMark"] = mark;
 
+            string sNo = Session["_ID"].ToString();
+            string crsNo = Session["_Course"].ToString();
+            double M = mark;
+            //string M = mark.ToString();
+
+            string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            SqlConnection con = new SqlConnection(CS);
+            con.Open();
+            string newcon = "insert into mcqTaken (studentID,courseID,examNo,mark) VALUES('" + sNo + "','" + crsNo + "', '" + "1" + "', '" + M + "')";
+
+            SqlCommand cmd = new SqlCommand(newcon, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
             Server.Transfer("ExamResult.aspx", true);
 
         }

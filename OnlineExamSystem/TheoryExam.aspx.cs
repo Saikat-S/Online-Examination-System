@@ -24,13 +24,16 @@ namespace OnlineExamSystem
             {
                 //RadioButtonList1.Items[0].Text = "Hello Radio Buttoin";
                 string crs = Session["_Course"].ToString();
+                int qN = (int)Session["_qNo"];
+                int qsNumber = qN;
+                string QN = qsNumber.ToString();
+
+                //Response.Write(QN);
 
                 string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
                 SqlConnection con = new SqlConnection(CS);
                 con.Open();
-
-
-                string newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + "1" + "'";
+                string newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + QN + "'";
 
                 SqlCommand cmd = new SqlCommand(newcon, con);
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -45,13 +48,12 @@ namespace OnlineExamSystem
                 }
                 con.Close();
 
-                //x++;
-                // xx = x;
-                // CR = crs + xx.ToString();
+                qN = qN + 1;
+                qsNumber = qN;
+                QN = qsNumber.ToString();
 
                 con.Open();
-
-                newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + "2" + "'";
+                newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + QN + "'";
                 cmd = new SqlCommand(newcon, con);
                 dr = cmd.ExecuteReader();
 
@@ -60,33 +62,35 @@ namespace OnlineExamSystem
                     qs2A.Text = (dr["qsA"].ToString());
                     qs2B.Text = (dr["qsB"].ToString());
                     m2A.Text = (dr["markA"].ToString());
-                    m2B.Text = (dr["markB"].ToString());
+                    m2B.Text = (dr["markB"].ToString());        
                 }
-
                 con.Close();
 
-                con.Open();
+                qN = qN + 1;
+                qsNumber = qN;
+                QN = qsNumber.ToString();
 
-                newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + "3" + "'";
+                con.Open();
+                newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + QN + "'";
                 cmd = new SqlCommand(newcon, con);
                 dr = cmd.ExecuteReader();
-
                 if (dr.Read())
                 {
                     qs3A.Text = (dr["qsA"].ToString());
                     qs3B.Text = (dr["qsB"].ToString());
                     m3A.Text = (dr["markA"].ToString());
-                    m3B.Text = (dr["markB"].ToString());
+                    m3B.Text = (dr["markB"].ToString());                    
                 }
-
                 con.Close();
 
-                con.Open();
+                qN = qN + 1;
+                qsNumber = qN;
+                QN = qsNumber.ToString();
 
-                newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + "4" + "'";
+                con.Open();
+                newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + QN + "'";
                 cmd = new SqlCommand(newcon, con);
                 dr = cmd.ExecuteReader();
-
                 if (dr.Read())
                 {
                     qs4A.Text = (dr["qsA"].ToString());
@@ -94,15 +98,16 @@ namespace OnlineExamSystem
                     m4A.Text = (dr["markA"].ToString());
                     m4B.Text = (dr["markB"].ToString());
                 }
-
                 con.Close();
 
-                con.Open();
+                qN = qN + 1;
+                qsNumber = qN;
+                QN = qsNumber.ToString();
 
-                newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + "5" + "'";
+                con.Open();
+                newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + QN + "'";
                 cmd = new SqlCommand(newcon, con);
                 dr = cmd.ExecuteReader();
-
                 if (dr.Read())
                 {
                     qs5A.Text = (dr["qsA"].ToString());
@@ -110,19 +115,18 @@ namespace OnlineExamSystem
                     m5A.Text = (dr["markA"].ToString());
                     m5B.Text = (dr["markB"].ToString());
                 }
-
                 con.Close();
+
+                if (!IsPostBack)
+                {
+                    //Response.Write(ET);
+                    int examTime;
+                    int.TryParse(ET, out examTime);
+
+                    Session["Timer"] = DateTime.Now.AddMinutes(examTime).ToString();
+                }
+
             }
-
-            if (!IsPostBack)
-            {
-                int examTime = 1;
-
-                int.TryParse(ET, out examTime);
-
-                Session["Timer"] = DateTime.Now.AddMinutes(examTime).ToString();
-            }
-
         }
 
         protected string getCourseName(string courseID)
@@ -246,35 +250,48 @@ namespace OnlineExamSystem
                 con.Close();
 
 
-                // increase the count value in admin queue
+            // increase the count value in admin queue
 
-                /*
-                // check for admin queue is empty or not
-                con = new SqlConnection(CS);
-                con.Open();
-                cmd = new SqlCommand("select count(*) from theoryQueue where courseID ='" + crsID + "'", con);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                cmd.ExecuteNonQuery();
+            /*
+            // check for admin queue is empty or not
+            con = new SqlConnection(CS);
+            con.Open();
+            cmd = new SqlCommand("select count(*) from theoryQueue where courseID ='" + crsID + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            cmd.ExecuteNonQuery();
 
-                string str = dt.Rows[0][0].ToString();
+            string str = dt.Rows[0][0].ToString();
 
-                int cnt;
-                int.TryParse(str, out cnt);
+            int cnt;
+            int.TryParse(str, out cnt);
 
-                cnt = cnt + 1;
+            cnt = cnt + 1;
 
-                // insert the data in admin queue database 
-                con.Open();
-                newcon = "insert into theoryQueue (courseID, courseName,count) VALUES('" + crsID + "', '"+ courseNAME + "', '" + cnt.ToString() + "')";
-                cmd = new SqlCommand(newcon, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                */
+            // insert the data in admin queue database 
+            con.Open();
+            newcon = "insert into theoryQueue (courseID, courseName,count) VALUES('" + crsID + "', '"+ courseNAME + "', '" + cnt.ToString() + "')";
+            cmd = new SqlCommand(newcon, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            */
+            
+            // insert taken course database
+            string sNo = Session["_ID"].ToString();
+            string crsNo = Session["_Course"].ToString();
+            string eN = "1";  // it need update
 
-                Response.Write("<script>alert('Your Answer Sheet Submited!');</script>");
-                Server.Transfer("Dashboard.aspx", true);
+            CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            con = new SqlConnection(CS);
+            con.Open();
+            newcon = "insert into theoryTaken (studentID,courseID,examNo) VALUES('" + sNo + "','" + crsNo + "', '" + eN + "')";
+            cmd = new SqlCommand(newcon, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            Response.Write("<script>alert('Your Answer Sheet Submited!');</script>");
+            Server.Transfer("Dashboard.aspx", true);
 
         }
 

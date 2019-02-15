@@ -199,6 +199,31 @@ namespace OnlineExamSystem
 
         protected void setB_Click(object sender, EventArgs e)
         {
+            string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            SqlConnection con = new SqlConnection(CS);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select count(*) from mcqCourseDetail where courseID ='" + SelectCourseDropDownList.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            cmd.ExecuteNonQuery();
+
+            string str = dt.Rows[0][0].ToString();
+            con.Close();
+
+            int num = 0;
+            int.TryParse(str, out num);
+
+            num = num + 1;
+            string examNO = num.ToString();
+
+            con = new SqlConnection(CS);
+            con.Open();
+            string newcon = "insert into mcqCourseDetail (courseID,examNo) VALUES('" + SelectCourseDropDownList.Text + "','" + examNO + "')";
+
+            cmd = new SqlCommand(newcon, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
             Response.Write("<script>alert('Exam Added!');</script>");
             Server.Transfer("AdminPanel.aspx", true);
         }

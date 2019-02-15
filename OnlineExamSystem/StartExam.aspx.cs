@@ -176,11 +176,14 @@ namespace OnlineExamSystem
                 int.TryParse(str, out num);
                 if (num >= 1)
                 {
-
-                    Server.Transfer("TheoryExam.aspx", true);
+                    Session["_sMCRS"] = "";
+                    Session["_sTCRS"] = SelectCourseDropDownList.Text;
+                    //Server.Transfer("TheoryExam.aspx", true);
                 }
                 else
                 {
+                    Session["_sTCRS"] = "";
+                    Session["_sMCRS"] = "";
                     Response.Write("<script>alert('No Theory Course Found!');</script>");
                 }
             }
@@ -203,16 +206,21 @@ namespace OnlineExamSystem
 
                 if (num>=1)
                 {
-
-                        Server.Transfer("MCQExam.aspx", true);
+                    Session["_sTCRS"] = "";
+                    Session["_sMCRS"] = SelectCourseDropDownList.Text;
+                    //Server.Transfer("MCQExam.aspx", true);
                 }
                 else
                 {
+                    Session["_sTCRS"] = "";
+                    Session["_sMCRS"] = "";
                     Response.Write("<script>alert('No MCQ Course Found!');</script>");
                 }
             }
             else
             {
+                Session["_sTCRS"] = "";
+                Session["_sMCRS"] = "";
                 Response.Write("<script>alert('You do not select any exam type!');</script>");
             }
         }
@@ -229,6 +237,79 @@ namespace OnlineExamSystem
         protected void logoutB_Click(object sender, EventArgs e)
         {
             Server.Transfer("LoginPage.aspx", true);
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = GridView1.SelectedRow;
+            string exNo = row.Cells[1].Text;
+            string crsNo = row.Cells[2].Text;
+            string stNo = Session["_ID"].ToString();
+
+            // search this exam taken or not
+            string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            SqlConnection con = new SqlConnection(CS);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select count(*) from theoryTaken where studentID='" + stNo + "' and courseID='" + crsNo + "' and examNo='" + exNo + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            cmd.ExecuteNonQuery();
+            string str = dt.Rows[0][0].ToString();
+            con.Close();
+            int num;
+            int.TryParse(str, out num);
+            if (num >= 1)
+            {
+                Response.Write("<script>alert('You already take this exam!');</script>");
+            }
+            else
+            {
+                //set start question number
+                int N;
+                int.TryParse(exNo, out N);
+                int xx = (N - 1) * 2;
+                xx = xx + 1;
+                Session["_qNO"] = xx;
+                Server.Transfer("TheoryExam.aspx", true);
+            }
+        }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = GridView2.SelectedRow;
+            string exNo = row.Cells[1].Text;
+            string crsNo = row.Cells[2].Text;
+            string stNo = Session["_ID"].ToString();
+
+            // search this exam taken or not
+            string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            SqlConnection con = new SqlConnection(CS);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select count(*) from mcqTaken where studentID='" + stNo + "' and courseID='" + crsNo + "' and examNo='" + exNo + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            cmd.ExecuteNonQuery();
+            string str = dt.Rows[0][0].ToString();
+            con.Close();
+            int num;
+            int.TryParse(str, out num);
+            if (num >= 1)
+            {
+                Response.Write("<script>alert('You already take this exam!');</script>");
+            }
+            else
+            {
+                //set start question number
+                int N;
+                int.TryParse(exNo, out N);
+                int xx = (N - 1) * 2;
+                xx = xx + 1;
+                Session["_qNO"] = xx;
+                Server.Transfer("MCQExam.aspx", true);
+            }
+            
         }
     }
 }
