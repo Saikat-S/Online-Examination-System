@@ -20,7 +20,7 @@ namespace OnlineExamSystem
                 string cID = Session["_crsID"].ToString();
 
 
-                string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                string CS = "your-database-connection-string";
                 SqlConnection con = new SqlConnection(CS);
                 con.Open();
 
@@ -165,13 +165,57 @@ namespace OnlineExamSystem
             double total = a + b + c + d + ee;
             total = a1 + b1 + c1 + d1 + ee1;
 
+
+           /* string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            SqlConnection con = new SqlConnection(CS);
+            con.Open();
+
+            string newcon = "select * from userInfo where id='" + ID + "'";
+
+            SqlCommand cmd = new SqlCommand(newcon, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            int a = 0;
+            if (dr.Read())
+            {
+                a = (int)(dr["no_of_exam"]);
+                b = (double)(dr["total_mark"]);
+                //Response.Write(a);
+                //Response.Write(b);
+
+                //noOfExam = ;
+
+            }
+            con.Close();
+   
+
+            totalMark = b + (double)num;
+
+            noOfExam = a + 1;
+
+
+            double Avg = totalMark / (double)noOfExam;
+
+            string av = Avg.ToString();
+
+            SqlConnection con1 = new SqlConnection(CS);
+            con1.Open();
+
+            string newcon1 = "update userInfo set no_of_exam='" + noOfExam + "', total_mark='" + totalMark + "', abc='" + av + "' where id='" + ID + "';";
+
+            SqlCommand cmd1 = new SqlCommand(newcon1, con1);
+
+            SqlDataReader dr1 = cmd1.ExecuteReader();
+
+            con1.Close();
+            */
+
             //Response.Write(total);
 
             string sID = Session["_stID"].ToString();
             string cID = Session["_crsID"].ToString();
 
             // update student theory course mark
-            string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            string CS = "your-database-connection-string";
             SqlConnection con = new SqlConnection(CS);
             con.Open();
             string newcon = "update theoryAns set mark='" + total + "', isAprove='" + "Yes" + "' where studentID='" + sID + "' and courseID='" + cID + "';";

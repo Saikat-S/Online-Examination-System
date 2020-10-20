@@ -15,12 +15,13 @@ namespace OnlineExamSystem
         static int count = 20;
         protected void Page_Load(object sender, EventArgs e)
         {
+            ///Session["Timer"] = DateTime.Now;
             string ET = "";
             if (Session["_Course"] != null)
             {
                 string crs = Session["_Course"].ToString();
 
-                string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                string CS = "your-database-connection-string";
                 SqlConnection con = new SqlConnection(CS);
                 con.Open();
 
@@ -210,7 +211,7 @@ namespace OnlineExamSystem
             double M = mark;
             //string M = mark.ToString();
 
-            string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            string CS = "your-database-connection-string";
             SqlConnection con = new SqlConnection(CS);
             con.Open();
             string newcon = "insert into mcqTaken (studentID,courseID,examNo,mark) VALUES('" + sNo + "','" + crsNo + "', '" + "1" + "', '" + M + "')";
@@ -222,12 +223,10 @@ namespace OnlineExamSystem
             Server.Transfer("ExamResult.aspx", true);
 
         }
-
         protected void logoutB_Click(object sender, EventArgs e)
         {
             Server.Transfer("LoginPage.aspx", true);
         }
-
         protected void Timer1_Tick(object sender, EventArgs e)
         {
             //Label3.Text = DateTime.Now.ToString("hh:mm:ss");
@@ -238,8 +237,10 @@ namespace OnlineExamSystem
             }
             else
             {
+                //Server.Transfer("LoginPage.aspx", true);
+                //Fun();
                 Label3.Text = "Time Out!";
-                //UpdatePanel1.Enabled = false;
+                //submit1B_Click(submit1B, null);
                 //Response.Write("<script>alert('Time Finish!');</script>");
             }
 

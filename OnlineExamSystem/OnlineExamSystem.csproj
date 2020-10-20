@@ -69,6 +69,7 @@
     <Content Include="AdminLeaderboard.aspx" />
     <Content Include="AdminQueue.aspx" />
     <Content Include="AdminCourseQueue.aspx" />
+    <Content Include="DownloadPdf.aspx" />
     <Content Include="EditExam.aspx" />
     <Content Include="EditMCQ.aspx" />
     <Content Include="EditTheory.aspx" />
@@ -92,6 +93,7 @@
     <Content Include="ShowAns.aspx" />
     <Content Include="SignUpPage.aspx" />
     <Content Include="StartExam.aspx" />
+    <Content Include="TakenCourses.aspx" />
     <Content Include="TheoryExam.aspx" />
     <Content Include="TheorySet.aspx" />
     <Content Include="UserProfile.aspx" />
@@ -132,6 +134,13 @@
     </Compile>
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadPdf.aspx.cs">
+      <DependentUpon>DownloadPdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DownloadPdf.aspx.designer.cs">
+      <DependentUpon>DownloadPdf.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditExam.aspx.cs">
       <DependentUpon>EditExam.aspx</DependentUpon>
@@ -217,6 +226,13 @@
     </Compile>
     <Compile Include="StartExam.aspx.designer.cs">
       <DependentUpon>StartExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TakenCourses.aspx.cs">
+      <DependentUpon>TakenCourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TakenCourses.aspx.designer.cs">
+      <DependentUpon>TakenCourses.aspx</DependentUpon>
     </Compile>
     <Compile Include="TheoryExam.aspx.cs">
       <DependentUpon>TheoryExam.aspx</DependentUpon>

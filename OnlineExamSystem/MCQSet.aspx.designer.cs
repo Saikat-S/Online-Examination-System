@@ -157,13 +157,13 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.TextBox AnsTBox;
         
         /// <summary>
-        /// selectB control.
+        /// selectCourseL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button selectB;
+        protected global::System.Web.UI.WebControls.Label selectCourseL;
         
         /// <summary>
         /// Op2L control.
@@ -193,13 +193,13 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// selectCourseL control.
+        /// SelectCourseDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label selectCourseL;
+        protected global::System.Web.UI.WebControls.DropDownList SelectCourseDropDownList;
         
         /// <summary>
         /// Op3L control.
@@ -227,15 +227,6 @@ namespace OnlineExamSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox qsTagTB;
-        
-        /// <summary>
-        /// SelectCourseDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SelectCourseDropDownList;
         
         /// <summary>
         /// Op4L control.

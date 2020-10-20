@@ -20,7 +20,7 @@ namespace OnlineExamSystem
                 {
                     string year = "";
                     string ID = Session["_ID"].ToString();
-                    string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                    string CS = "your-database-connection-string";
                     SqlConnection con = new SqlConnection(CS);
                     con.Open();
 
@@ -162,7 +162,7 @@ namespace OnlineExamSystem
             if (ExamType == "Theory")
             {
 
-                string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                string CS = "your-database-connection-string";
                 SqlConnection con = new SqlConnection(CS);
                 con.Open();
                 SqlCommand cmd = new SqlCommand("select count(*) from theoryQS where course ='" + SelectCourseDropDownList.Text + "'", con);
@@ -189,7 +189,7 @@ namespace OnlineExamSystem
             }
             else if (ExamType == "MCQ")
             {
-                string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                string CS = "your-database-connection-string";
                 SqlConnection con = new SqlConnection(CS);
                 con.Open();
                 SqlCommand cmd = new SqlCommand("select count(*) from mcqQS where course ='" + SelectCourseDropDownList.Text + "'", con);
@@ -247,7 +247,7 @@ namespace OnlineExamSystem
             string stNo = Session["_ID"].ToString();
 
             // search this exam taken or not
-            string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            string CS = "your-database-connection-string";
             SqlConnection con = new SqlConnection(CS);
             con.Open();
             SqlCommand cmd = new SqlCommand("select count(*) from theoryTaken where studentID='" + stNo + "' and courseID='" + crsNo + "' and examNo='" + exNo + "'", con);
@@ -283,7 +283,7 @@ namespace OnlineExamSystem
             string stNo = Session["_ID"].ToString();
 
             // search this exam taken or not
-            string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            string CS = "your-database-connection-string";
             SqlConnection con = new SqlConnection(CS);
             con.Open();
             SqlCommand cmd = new SqlCommand("select count(*) from mcqTaken where studentID='" + stNo + "' and courseID='" + crsNo + "' and examNo='" + exNo + "'", con);

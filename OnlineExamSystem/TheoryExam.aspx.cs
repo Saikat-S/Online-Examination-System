@@ -30,7 +30,7 @@ namespace OnlineExamSystem
 
                 //Response.Write(QN);
 
-                string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                string CS = "your-database-connection-string";
                 SqlConnection con = new SqlConnection(CS);
                 con.Open();
                 string newcon = "select  * from theoryQS where course='" + crs + "' and qsNo ='" + QN + "'";
@@ -192,7 +192,7 @@ namespace OnlineExamSystem
             string stID = Session["_ID"].ToString();
             string crsID = Session["_Course"].ToString();
 
-                string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                string CS = "your-database-connection-string";
 
                 SqlConnection con = new SqlConnection(CS);
                 con.Open();
@@ -282,7 +282,7 @@ namespace OnlineExamSystem
             string crsNo = Session["_Course"].ToString();
             string eN = "1";  // it need update
 
-            CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+            CS = "your-database-connection-string";
             con = new SqlConnection(CS);
             con.Open();
             newcon = "insert into theoryTaken (studentID,courseID,examNo) VALUES('" + sNo + "','" + crsNo + "', '" + eN + "')";

@@ -157,13 +157,13 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.TextBox markATB;
         
         /// <summary>
-        /// selectB control.
+        /// selectCourseL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button selectB;
+        protected global::System.Web.UI.WebControls.Label selectCourseL;
         
         /// <summary>
         /// QL1 control.
@@ -202,13 +202,13 @@ namespace OnlineExamSystem {
         protected global::System.Web.UI.WebControls.TextBox qsNoTB;
         
         /// <summary>
-        /// selectCourseL control.
+        /// SelectCourseDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label selectCourseL;
+        protected global::System.Web.UI.WebControls.DropDownList SelectCourseDropDownList;
         
         /// <summary>
         /// QL4 control.
@@ -227,15 +227,6 @@ namespace OnlineExamSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox markBTB;
-        
-        /// <summary>
-        /// SelectCourseDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SelectCourseDropDownList;
         
         /// <summary>
         /// clearB control.

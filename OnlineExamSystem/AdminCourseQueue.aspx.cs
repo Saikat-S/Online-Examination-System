@@ -29,7 +29,7 @@ namespace OnlineExamSystem
                 string CID = Session["_checkCID"].ToString();
 
                 // check admin queue course in empty or not
-                string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                string CS = "your-database-connection-string";
                 SqlConnection con = new SqlConnection(CS);
                 con.Open();
                 SqlCommand cmd = new SqlCommand("select count(*) from theoryCourseQueue where courseID ='" + CID + "'", con);

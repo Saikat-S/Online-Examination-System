@@ -17,7 +17,7 @@ namespace OnlineExamSystem
             if (Session["_ID"] != null)
             {
                 string ID = Session["_ID"].ToString();
-                string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                string CS = "your-database-connection-string";
                 SqlConnection con = new SqlConnection(CS);
                 con.Open();
 

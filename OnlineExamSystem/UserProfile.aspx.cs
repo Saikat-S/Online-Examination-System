@@ -77,5 +77,9 @@ namespace OnlineExamSystem
             Server.Transfer("LoginPage.aspx", true);
         }
 
+        protected void coursesB_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("TakenCourses.aspx", true);
+        }
     }
 }

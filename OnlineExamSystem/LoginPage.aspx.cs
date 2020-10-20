@@ -27,7 +27,7 @@ namespace OnlineExamSystem
             //Server.Transfer("Dashboard.aspx", true);
             if (AccountTypeDB.SelectedItem.Text == "Student")
             {
-                string CS = "Data Source=DESKTOP-JT5TE1G\\SQLEXPRESS;Initial Catalog=OnlineExam;Persist Security Info=True;User ID=sa;Password=369@saikat";
+                string CS = "your-database-connection-string";
                 SqlConnection con = new SqlConnection(CS);
                 try
                 {
