@@ -22,33 +22,33 @@
 
 ### Screenshots
 
-#### Login Page
+##### Login Page
 ![Login Page](images/loginPage.PNG)
 
-### Admin Aspect 
+#### Admin Aspect 
 * Set exam for different courses.
 * Evaluation Theory Answer Sheet
 * Add and edit the questions.
 
-#### Admin Panel
+##### Admin Panel
 ![](images/AdminPanel.PNG)
 
-#### Setting MCQ Questions
+##### Setting MCQ Questions
 ![](images/McqSet.PNG)
 
-#### Setting Theory Questions
+##### Setting Theory Questions
 ![](images/TheorySet.PNG)
 
-#### Edit Exam Question
+##### Edit Exam Question
 ![](images/EditExam.PNG)
 
-#### Theory Answer Sheet Queue
+##### Theory Answer Sheet Queue
 ![](images/Queue.PNG)
 
-#### Marking Theory Answer Sheet
+##### Marking Theory Answer Sheet
 ![](images/TheoryAns.PNG)
 
-##### STUDENT ASPECT
+#### STUDENT ASPECT
 * Examinee Registration
 * Take part of the exam
 * See leaderboard
@@ -68,7 +68,7 @@
 ##### MCQ Exam Result 
 ![](images/ExamResult.PNG)
 
-#### Leaderboard
+##### Leaderboard
 ![](images/LeaderBoard.PNG)
 
 
