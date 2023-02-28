@@ -4,38 +4,110 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link href="CSS/bootstrap.css" rel="stylesheet" />
+    <title>Online Exam Management System</title>
     <style type="text/css">
+        body {
+            height: 100%;
+            width: 100%;
+            background-image: url("https://img.freepik.com/premium-vector/retro-science-wallpaper_23-2148557501.jpg?w=2000");
+            background-size: cover;
+            z-index: -2
+        }
 
+        #cover {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(243, 237, 247);
+            opacity: 0.5;
+            position: absolute;
+            z-index: -1
+        }
 
-        .auto-style1 {
+        #headerPanel1 {
+            height: 200px;
+            width: 100%;
+            background-color: rgba(21, 252, 148, 0.7);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #labelHeading {
+            height: auto;
+            width: auto;
+            font-size: 60px;
+        }
+
+            #labelHeading > p {
+                color: rgb(89, 146, 236);
+            }
+
+        #Menu {
+            height: 25px;
+            width: 100%;
+            background-color: rgba(21, 252, 148, 0.3);
+        }
+
+            #Menu > ul {
+                display: flex;
+                list-style: none;
+                justify-content: flex-end;
+            }
+
+                #Menu > ul > li {
+                    margin-right: 18px;
+                    margin-left: 18px;
+                }
+
+                    #Menu > ul > li > a {
+                        text-decoration: none;
+                    }
+
+                #Menu > ul :last-child {
+                    padding-right: 5px;
+                    padding-left: 10px;
+                }
+
+        #welcome_message {
+            text-align: center;
+            font-size: 50px;
+            height: 70px;
             width: 100%;
         }
-        .auto-style2 {
-            height: 96px;
+
+        #exam_btn{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:400px;
         }
-        .auto-style4 {
-            height: 23px;
+
+        #sExamB{
+            height: 100px;
+            width: 200px;
+            font-size: 25px;
         }
-        .auto-style20 {
-            height: 36px;
-        }
-        .auto-style9 {
-            height: 50px;
-        }
-        .auto-style22 {
-            height: 172px;
-        }
-        </style>
+
+
+    </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+
+
+    <form id="form2" runat="server">
+
+        <div id="cover">
+        </div>
+
+        <%--<form id="form1" runat="server">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">
-                    <asp:Panel ID="headerPanel1" runat="server" BackColor="#00CC99" Height="125px" style="margin-top: 0px">
-                        <asp:Label ID="Label1" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="XX-Large" ForeColor="#006666" Height="39px" style="margin-left: 388px; margin-bottom: 0px; margin-top: 43px;" Text="Online Examination System Management" Width="580px"></asp:Label>
-                    </asp:Panel>
+                    <asp:panel id="headerpanel1" runat="server" backcolor="#00cc99" height="125px" style="margin-top: 0px">
+                        <asp:label id="label1" runat="server" borderstyle="none" font-bold="true" font-size="xx-large" forecolor="#006666" height="39px" style="margin-left: 388px; margin-bottom: 0px; margin-top: 43px;" text="online examination system management" width="580px"></asp:label>
+                    </asp:panel>
                 </td>
             </tr>
             <tr>
@@ -69,6 +141,50 @@
                 <td>&nbsp;</td>
             </tr>
         </table>
+    </form>--%>
+
+
+        <div>
+            <asp:Panel ID="headerPanel1" runat="server">
+                <div id="labelHeading">
+                    <p>
+                        Online Examination Management System
+                    </p>
+                </div>
+            </asp:Panel>
+        </div>
+
+        <div id="Menu">
+            <ul>
+                <li>
+                    <asp:HyperLink ID="leaderboard_link" runat="server" href="Leaderboard.aspx">Leaderboard</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="profile_link" runat="server" href="UserProfile.aspx">Profile</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="home_link" runat="server" href="Dashboard.aspx">Home</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="logout_link" runat="server" href="LoginPage.aspx">Logout</asp:HyperLink>
+                </li>
+            </ul>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div id="welcome_message">
+            <asp:Label ID="Label2" runat="server" ForeColor="#CC6600" Text="Welcome To The Dashboard"></asp:Label>
+        </div>
+
+        <div id="exam_btn">
+            <asp:Button ID="sExamB" runat="server" text="Start Exam" class="btn btn-primary" OnClick="sExamB_Click"/>
+        </div>
+
     </form>
+
+
 </body>
 </html>
