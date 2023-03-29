@@ -7,20 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OnlineExamSystem {
-    
-    
-    public partial class Dashboard {
-        
+namespace OnlineExamSystem
+{
+
+
+    public partial class Dashboard
+    {
+
         /// <summary>
-        /// form1 control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
+
         /// <summary>
         /// headerPanel1 control.
         /// </summary>
@@ -29,61 +31,43 @@ namespace OnlineExamSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel headerPanel1;
-        
+
         /// <summary>
-        /// Label1 control.
+        /// leaderboard_link control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
+        protected global::System.Web.UI.WebControls.HyperLink leaderboard_link;
+
         /// <summary>
-        /// signUpPanel1 control.
+        /// profile_link control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel signUpPanel1;
-        
+        protected global::System.Web.UI.WebControls.HyperLink profile_link;
+
         /// <summary>
-        /// homeB control.
+        /// home_link control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeB;
-        
+        protected global::System.Web.UI.WebControls.HyperLink home_link;
+
         /// <summary>
-        /// profileB control.
+        /// logout_link control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button profileB;
-        
-        /// <summary>
-        /// LeaderboardB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LeaderboardB;
-        
-        /// <summary>
-        /// logoutB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logoutB;
-        
+        protected global::System.Web.UI.WebControls.HyperLink logout_link;
+
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -92,7 +76,7 @@ namespace OnlineExamSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
         /// sExamB control.
         /// </summary>
